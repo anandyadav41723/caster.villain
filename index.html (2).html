@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV ESPORTS | CASTER VILLAIN</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #050505;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+/* NAVBAR */
+
+nav {
+    height: 80px;
+    padding: 0 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #090909;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-family: Orbitron;
+    font-size: 20px;
+    font-weight: 900;
+    color: white;
+    text-decoration: none;
+}
+
+.logo span {
+    color: #ff2525;
+}
+
+.back {
+    text-decoration: none;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 90vh;
+    padding: 80px 8%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, #050505 30%, #080808e0 65%, #170303),
+        #050505;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -150px;
+    top: 50px;
+    background: #ff0000;
+    filter: blur(180px);
+    opacity: .12;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+.tag {
+    color: #ff3030;
+    letter-spacing: 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h1 {
+    font-family: Orbitron;
+    font-size: clamp(45px, 8vw, 110px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin-top: 25px;
+}
+
+.hero h1 span {
+    color: #ff2020;
+}
+
+.hero h2 {
+    font-family: Orbitron;
+    color: #aaa;
+    letter-spacing: 8px;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+.description {
+    max-width: 650px;
+    color: #aaa;
+    font-size: 19px;
+    line-height: 1.8;
+    margin-top: 25px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #ff2020;
+    background: #ff2020;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+
+.hero-btn:hover {
+    background: transparent;
+    color: #ff2020;
+}
+
+/* BRAND CARD */
+
+.brand-section {
+    padding: 80px 8%;
+    background: #080808;
+}
+
+.brand-card {
+    border: 1px solid #252525;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(135deg, #111, #080808, #150303);
+}
+
+.brand-card::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: red;
+    filter: blur(170px);
+    opacity: .15;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-content small {
+    letter-spacing: 6px;
+    color: #888;
+}
+
+.brand-content h2 {
+    font-family: Orbitron;
+    font-size: clamp(50px, 9vw, 110px);
+    margin: 25px 0;
+    font-weight: 900;
+}
+
+.brand-content h2 span {
+    color: #ff2020;
+}
+
+.brand-content p {
+    letter-spacing: 5px;
+    color: #999;
+}
+
+/* ABOUT */
+
+.about {
+    padding: 90px 8%;
+}
+
+.section-title {
+    font-family: Orbitron;
+    font-size: 35px;
+}
+
+.section-title span {
+    color: #ff2020;
+}
+
+.about-box {
+    margin-top: 35px;
+    padding: 35px;
+    background: #101010;
+    border-left: 3px solid #ff2020;
+}
+
+.about-box p {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* SOCIAL */
+
+.social {
+    padding: 90px 8%;
+    text-align: center;
+    background: #080808;
+    border-top: 1px solid #1a1a1a;
+}
+
+.social h2 {
+    font-family: Orbitron;
+    font-size: 35px;
+}
+
+.social h2 span {
+    color: #ff2020;
+}
+
+.handle {
+    color: #888;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.social-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background: #111;
+    border: 1px solid #292929;
+    padding: 18px 35px;
+    letter-spacing: 3px;
+    transition: .3s;
+}
+
+.social-links a:hover {
+    border-color: #ff2020;
+    color: #ff2020;
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px #ff000020;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #030303;
+    border-top: 1px solid #1c1c1c;
+    color: #666;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    nav {
+        height: 70px;
+        padding: 0 5%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .back {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 80vh;
+        padding: 70px 6%;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero h2 {
+        font-size: 17px;
+        letter-spacing: 4px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .brand-section,
+    .about,
+    .social {
+        padding: 65px 6%;
+    }
+
+    .brand-card {
+        min-height: 260px;
+    }
+
+    .brand-content h2 {
+        font-size: 48px;
+    }
+
+    .brand-content p {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .section-title,
+    .social h2 {
+        font-size: 25px;
+    }
+
+    .about-box {
+        padding: 22px;
+    }
+
+    .social-links a {
+        padding: 14px 20px;
+        font-size: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html" class="logo">CASTER <span>VILLAIN</span></a>
+    <a href="index.html" class="back">← BACK</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+
+        <p class="tag">OFFICIAL ESPORTS DIVISION</p>
+
+        <h1>CASTER VILLAIN<br>
+        <span>ESPORTS</span></h1>
+
+        <h2>CV ESPORTS</h2>
+
+        <p class="description">
+            A competitive gaming organization driven by ambition,
+            discipline, teamwork and passion. We don't just play
+            the game — we build our identity beyond it.
+        </p>
+
+        <a href="#social" class="hero-btn">FOLLOW OUR JOURNEY ↗</a>
+
+    </div>
+</section>
+
+<!-- BRAND -->
+<section class="brand-section">
+    <div class="brand-card">
+        <div class="brand-content">
+
+            <small>THE OFFICIAL IDENTITY</small>
+
+            <h2>CV <span>ESPORTS</span></h2>
+
+            <p>COMPETE • CONNECT • CONQUER</p>
+
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <h2 class="section-title">ABOUT <span>CV ESPORTS</span></h2>
+
+    <div class="about-box">
+        <p>
+            CASTER VILLAIN ESPORTS is a competitive gaming identity
+            representing passion, growth, teamwork and dedication.
+            Our goal is to create a strong presence in the gaming
+            community and build a name through our commitment
+            and competitive spirit.
+        </p>
+    </div>
+</section>
+
+<!-- SOCIAL -->
+<section class="social" id="social">
+
+    <h2>CONNECT WITH <span>CV ESPORTS</span></h2>
+
+    <p class="handle">@castervillainesports</p>
+
+    <div class="social-links">
+        <a href="#" target="_blank">INSTAGRAM</a>
+        <a href="#" target="_blank">YOUTUBE</a>
+        <a href="#" target="_blank">DISCORD</a>
+        <a href="#" target="_blank">FACEBOOK</a>
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+    © 2026 CASTER VILLAIN | CV ESPORTS
+</footer>
+
+</body>
+</html>
